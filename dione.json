@@ -1,0 +1,60 @@
+{
+    "dependencies": {
+        "git": {
+            "version": "latest"
+        }
+    },
+    "installation": [
+        {
+            "name": "Cloning repository",
+            "type": "GIT",
+            "commands": [
+                "git clone https://github.com/iahispano/applio.git applio"
+            ]
+        },
+        {
+            "name": "Running 'run-install.bat'",
+            "type": "SHELL",
+            "commands": [
+                "cd applio",
+                "./run-install.bat"
+            ]
+        }
+    ],
+    "start": [
+        {
+            "name": "Running 'run-applio.bat'",
+            "type": "SHELL",
+            "commands": [
+                "cd applio",
+                "./run-applio.bat"
+            ]
+        }
+    ],
+    "stop": [
+        {
+            "name": "Stopping 'run-applio.bat'",
+            "type": "SHELL",
+            "commands": [
+                "taskkill /F /IM run-applio.bat"
+            ]
+        }
+    ],
+    "uninstall": [
+        {
+            "name": "Uninstalling Applio",
+            "type": "SHELL",
+            "commands": [
+                "rmdir /s /q applio"
+            ]
+        },
+        {
+            "name": "Uninstalling Git",
+            "type": "SHELL",
+            "not-required": true,
+            "commands": [
+                "start \"C:\\Program Files\\Git\\unins000.exe\""
+            ]
+        }
+    ]
+}
