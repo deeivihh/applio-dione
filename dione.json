@@ -17,7 +17,7 @@
             "type": "SHELL",
             "commands": [
                 "cd applio",
-                "call run-install.bat"
+                "run-install.bat"
             ]
         }
     ],
@@ -27,7 +27,7 @@
             "type": "SHELL",
             "commands": [
                 "cd applio",
-                "call run-applio.bat"
+                "run-applio.bat"
             ]
         }
     ],
