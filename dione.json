@@ -25,6 +25,7 @@
         {
             "name": "Running 'run-applio.bat'",
             "type": "SHELL",
+            "catch": "6969",
             "commands": [
                 "cd applio",
                 "run-applio.bat"
