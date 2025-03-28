@@ -7,35 +7,49 @@
     "installation": [
         {
             "name": "Cloning repository",
-            "type": "GIT",
             "commands": [
                 "git clone https://github.com/iahispano/applio.git applio"
             ]
         },
         {
             "name": "Running 'run-install.bat'",
-            "type": "SHELL",
-            "commands": [
-                "cd applio",
-                "run-install.bat"
-            ]
+              "commands": [
+                {
+                    "command": "cd applio"
+                }
+                {
+                  "platform": "windows",
+                  "command": "run-install.bat"
+                },
+                {
+                  "platform": "linux",
+                  "command": "run-install.sh"
+                },
+              ]
         }
     ],
     "start": [
         {
             "name": "Running 'run-applio.bat'",
-            "type": "SHELL",
             "catch": "6969",
-            "commands": [
-                "cd applio",
-                "run-applio.bat"
-            ]
+              "commands": [
+                {
+                    "command": "cd applio"
+                }
+                {
+                  "platform": "windows",
+                  "command": "run-applio.bat"
+                },
+                {
+                  "platform": "linux",
+                  "command": "run-applio.sh"
+                },
+              ]
         }
     ],
     "stop": [
         {
             "name": "Stopping 'run-applio.bat'",
-            "type": "SHELL",
             "commands": [
                 "taskkill /F /IM run-applio.bat"
             ]
@@ -44,14 +58,12 @@
     "uninstall": [
         {
             "name": "Uninstalling Applio",
-            "type": "SHELL",
             "commands": [
                 "rmdir /s /q applio"
             ]
         },
         {
             "name": "Uninstalling Git",
-            "type": "SHELL",
             "not-required": true,
             "commands": [
                 "start \"C:\\Program Files\\Git\\unins000.exe\""
