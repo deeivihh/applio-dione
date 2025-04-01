@@ -16,7 +16,7 @@
               "commands": [
                 {
                     "command": "cd applio"
-                }
+                },
                 {
                   "platform": "windows",
                   "command": "run-install.bat"
