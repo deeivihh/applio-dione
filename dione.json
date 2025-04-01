@@ -24,7 +24,7 @@
                 {
                   "platform": "linux",
                   "command": "run-install.sh"
-                },
+                }
               ]
         }
     ],
@@ -35,7 +35,7 @@
               "commands": [
                 {
                     "command": "cd applio"
-                }
+                },
                 {
                   "platform": "windows",
                   "command": "run-applio.bat"
@@ -43,7 +43,7 @@
                 {
                   "platform": "linux",
                   "command": "run-applio.sh"
-                },
+                }
               ]
         }
     ],
